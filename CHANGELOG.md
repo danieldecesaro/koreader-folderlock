@@ -4,6 +4,17 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-07-29
+
+### Fixed
+
+- Three diagnostic log lines, left over from tracking down a bug during development, were
+  logging at `info` and shipped that way in 1.0.0. One of them fired on every book opened and
+  another on every folder long-press, writing the folder name into the log each time. They are
+  `dbg` now. The gate events that are worth auditing — blocked, unlocked, re-locked, refused,
+  sleeping, waking — deliberately stay at `info`, so they remain readable on a device without
+  debug logging turned on.
+
 ## [1.0.0] - 2026-07-29
 
 First release.
@@ -51,4 +62,5 @@ First release.
 - Kindle 10th generation (`KindleBasic3`, 600x800 @ 167 dpi) running KOReader v2026.07.
 - KOReader SDL emulator at the same screen geometry.
 
+[1.0.1]: https://github.com/danieldecesaro/koreader-folderlock/releases/tag/v1.0.1
 [1.0.0]: https://github.com/danieldecesaro/koreader-folderlock/releases/tag/v1.0.0

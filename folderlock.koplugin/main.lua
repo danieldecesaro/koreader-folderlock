@@ -548,9 +548,11 @@ function FolderLock:folderDialogRow()
         local fc = (fm and fm.file_chooser) or self.ui.file_chooser
         local current = normalize(fc and fc.path)
         if current and (path == current or path == parentDir(current)) then return nil end
-        -- info, not dbg: dbg is silent unless debug logging is on, which makes it useless
-        -- for diagnosing anything on the device.
-        logger.info("FolderLock: adding folder dialog button for", path)
+        -- dbg, not info: this fires on every folder long-press, so at info it would both
+        -- flood the log and write every folder name you touch into it. The gate events that
+        -- matter for auditing (blocked, unlocked, re-locked) stay at info on purpose, so
+        -- they are readable on a device without debug logging enabled.
+        logger.dbg("FolderLock: adding folder dialog button for", path)
 
         local protected = getFolders()[path] ~= nil
         return {
@@ -585,13 +587,14 @@ function FolderLock:attachFolderDialogRow(fm)
     if fm.file_dialog_added_buttons and fm.file_dialog_added_buttons.index.folderlock then
         return -- already on this one
     end
-    logger.info("FolderLock: folder dialog button registered on", tostring(fm))
+    logger.dbg("FolderLock: folder dialog button registered on", tostring(fm))
     fm:addFileDialogButtons("folderlock", self:folderDialogRow())
 end
 
 function FolderLock:registerFolderDialogButton()
     if not self.ui.addFileDialogButtons then
-        logger.info("FolderLock: no addFileDialogButtons here, skipping the folder button")
+        -- Expected in reader context, which happens on every book you open: dbg, not info.
+        logger.dbg("FolderLock: no addFileDialogButtons here, skipping the folder button")
         return
     end
     self:attachFolderDialogRow(self.ui)
