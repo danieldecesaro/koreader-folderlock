@@ -1,0 +1,6 @@
+# The plugin is deployed to a Linux device, so keep LF everywhere regardless of the
+# platform it was cloned on.
+* text=auto eol=lf
+
+# Compiled catalog: never touch its bytes. Line-ending conversion would corrupt it.
+*.mo binary
