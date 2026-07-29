@@ -1,0 +1,124 @@
+# Traducao pt-BR do plugin folderlock.
+# Regenerar o .mo depois de editar:
+#   msgfmt -o folderlock.mo folderlock.po
+# Conferir contra o codigo depois de mexer nas strings:
+#   xgettext --language=Lua --keyword=_ --from-code=UTF-8 --no-location -o l10n/folderlock.pot main.lua _meta.lua
+#   msgcmp l10n/pt_BR/folderlock.po l10n/folderlock.pot
+msgid ""
+msgstr ""
+"Project-Id-Version: folderlock\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Unlock"
+msgstr "Desbloquear"
+
+msgid "Wrong PIN."
+msgstr "PIN incorreto."
+
+msgid "Enter a new PIN"
+msgstr "Digite um novo PIN"
+
+msgid "Next"
+msgstr "Avançar"
+
+msgid "The PIN cannot be empty."
+msgstr "O PIN não pode ficar vazio."
+
+msgid "Repeat the new PIN"
+msgstr "Repita o novo PIN"
+
+msgid "Save"
+msgstr "Salvar"
+
+msgid "PIN saved."
+msgstr "PIN salvo."
+
+msgid "The two entries do not match. PIN unchanged."
+msgstr "Os dois valores não coincidem. O PIN não foi alterado."
+
+msgid "PIN for %1"
+msgstr "PIN de %1"
+
+msgid "Remove PIN protection"
+msgstr "Remover proteção por PIN"
+
+msgid "Protect with PIN"
+msgstr "Proteger com PIN"
+
+msgid "%1 is now protected."
+msgstr "%1 agora está protegida."
+
+msgid "%1 is protected. Open it with your PIN to read its books."
+msgstr "%1 está protegida. Abra com o seu PIN para ler os livros dela."
+
+msgid "Folder lock"
+msgstr "Bloqueio de pastas"
+
+msgid "Enter the PIN to remove protection"
+msgstr "Digite o PIN para remover a proteção"
+
+msgid "%1 is no longer protected."
+msgstr "%1 não está mais protegida."
+
+msgid "Remove protection from %1?"
+msgstr "Remover a proteção de %1?"
+
+msgid "Remove"
+msgstr "Remover"
+
+msgid "No protected folders yet"
+msgstr "Nenhuma pasta protegida ainda"
+
+msgid "Change PIN"
+msgstr "Alterar PIN"
+
+msgid "Set PIN"
+msgstr "Definir PIN"
+
+msgid "Enter the current PIN"
+msgstr "Digite o PIN atual"
+
+msgid "Protect this folder"
+msgstr "Proteger esta pasta"
+
+msgid "Protected folders (%1)"
+msgstr "Pastas protegidas (%1)"
+
+msgid "Ask for the PIN after waking up"
+msgstr "Pedir o PIN ao acordar"
+
+msgid ""
+"When off, waking up puts you back where you were and protected folders stay "
+"unlocked for that session."
+msgstr ""
+"Desligado, ao acordar você volta para onde estava e as pastas protegidas "
+"continuam desbloqueadas naquela sessão."
+
+msgid "Hide cover of protected books when suspended"
+msgstr "Ocultar capa de livros protegidos ao suspender"
+
+msgid ""
+"Shows one of KOReader's default backgrounds instead, so the sleep screen "
+"does not give away what you were reading."
+msgstr ""
+"Mostra um dos fundos padrão do KOReader no lugar, para a tela de descanso "
+"não revelar o que você estava lendo."
+
+msgid "Lock now"
+msgstr "Bloquear agora"
+
+msgid "Protected folders are locked again."
+msgstr "As pastas protegidas estão bloqueadas novamente."
+
+msgid ""
+"Asks for a PIN before opening protected folders or any document inside them."
+msgstr ""
+"Pede um PIN antes de abrir pastas protegidas ou qualquer documento dentro "
+"delas."

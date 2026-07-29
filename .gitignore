@@ -1,0 +1,9 @@
+# The compiled .mo IS tracked on purpose: users install the plugin by copying it, with no
+# build step, so the catalog has to ship ready to use.
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
+*~
+*.swp
+*.bak
