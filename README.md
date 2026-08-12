@@ -107,6 +107,10 @@ Class methods are wrapped following the idiom of `coverbrowser.koplugin`: origin
 locals, patched once, guarded against re-patching when the plugin is instantiated again for
 the file manager and the reader.
 
+None of this is a supported extension point, so a KOReader update can break it without
+raising an error. [MAINTENANCE.md](MAINTENANCE.md) lists every upstream symbol the plugin
+touches and the symptom to expect when it changes.
+
 ## Translations
 
 The UI follows KOReader's interface language. English is the source; **pt-BR** ships
@@ -128,6 +132,10 @@ Note: switching KOReader's interface language at runtime clears the translation 
 plugin strings fall back to English until the next restart.
 
 ## Development
+
+[MAINTENANCE.md](MAINTENANCE.md) is the companion to this section: upstream contact surface,
+the settings file, the acceptance test script to run against a new KOReader release, and the
+release checklist.
 
 Lint with KOReader's own configuration:
 

@@ -626,13 +626,13 @@ KOReader resumes the last file (or takes one on the command line) and the plugin
 instantiated during ReaderUI:init, by which time showReader has already run unpatched.
 
 This is still called before anything is painted -- doShowReader() only calls
-UIManager:show() after ReaderUI:new() returns, and plugins load at readerui.lua:475,
+UIManager:show() after ReaderUI:new() returns, and plugins load at readerui.lua:464,
 inside init -- so the pages never reach the screen. The document object exists and is
 parsed at this point, which is why we hand over to the file manager instead of trying to
 prompt on top of it.
 
 Passing the folder itself to showFileManager is deliberate: it splits the path
-(readerui.lua:583), so the file manager opens at the *parent* with the protected folder
+(readerui.lua:581), so the file manager opens at the *parent* with the protected folder
 focused, exactly where the PIN prompt belongs.
 --]]
 function FolderLock:refuseProtectedDocument()

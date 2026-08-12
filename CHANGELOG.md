@@ -4,6 +4,20 @@ All notable changes to this project are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Added `MAINTENANCE.md`: the full contact surface with KOReader (four patched class methods,
+  one event, one official extension point, the internals read directly), each with the symptom
+  to expect when upstream changes it; the settings file and runtime state; a 16-step acceptance
+  test script to run against a new KOReader release; and the release checklist, including the
+  submodule bump in `koreader/contrib` that a release is invisible without. Nothing in the
+  plugin's behaviour changed.
+- Corrected two stale line references in `main.lua` comments (`readerui.lua:475` → `:464`,
+  `:583` → `:581`). All source references in the plugin and in `MAINTENANCE.md` are now
+  verified against `74e3ffb` / `v2026.07-3-g74e3ffbde`.
+
 ## [1.0.1] - 2026-07-29
 
 ### Fixed
