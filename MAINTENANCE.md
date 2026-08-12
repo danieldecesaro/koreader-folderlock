@@ -218,10 +218,12 @@ bumping.
 5. Tag `vX.Y.Z` and push the tag.
 6. Publish a GitHub release with a zip whose **root contains `folderlock.koplugin/`**, so
    unzipping into `plugins/` lands correctly.
-7. **Bump the submodule in `koreader/contrib`.** The catalog carries this repo as a submodule
-   pinned to a tag (PR #159 pinned `v1.0.1`), so a new release is invisible to contrib users
-   until a follow-up PR moves the pin. Easy thing to forget — the release itself looks complete
-   without it.
+7. **Bump the submodule in `koreader/contrib`.** The catalog carries this repo as a submodule at
+   `folderlock.koplugin`, and a submodule pins a **commit, not a tag** — PR #159 recorded the
+   gitlink `dbe717c`, which is what `v1.0.1` points at. A new release is therefore invisible to
+   contrib users until a follow-up PR moves that gitlink: check out the new tag inside the
+   submodule, commit the changed gitlink in the superproject, open the PR. Easy thing to forget,
+   because the release itself looks complete without it.
 
 ## What is intentionally not fixed
 
